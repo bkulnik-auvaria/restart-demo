@@ -2,7 +2,7 @@
 
 
 Analyze the housing data that you can find "HPI.csv" file.
-Write a python script to read the data in the provided file and calculate the mean `index_nsa` and `index_sa` column.
+Write a python script to read the data in the provided file and calculate the mean of the _second_ column.
 
 
 **Bonus**: Find the average price per year.
