@@ -47,7 +47,7 @@ print("What do these '\\n' mean? \n\n Can you find out?")
 ---
 
 ```python
-with open("prices.csv") do f:
+with open("prices.csv") as f:
     content = f.read()
 
 lines = content.splitlines()
