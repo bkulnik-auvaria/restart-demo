@@ -5,14 +5,13 @@ with open(r'C:\Users\dci-student\Documents\GitHub\restart-demo\Exercises\02-User
 with open(r'C:\Users\dci-student\Documents\GitHub\restart-demo\Exercises\02-Usernames\english-nouns.txt') as f:
     noun=f.read().split()
 
-nameFind=False
-while nameFind!=True:
+h=0
+while h!='1':
     x=random.choice(adjective)
     y=random.choice(noun)
     print(x+' '+y)
     h=input('If you like this name insert 1: ')
-    if h=='1': nameFind=True
-
+    
 low_alph=list(string.ascii_lowercase)
 up_alph=list(string.ascii_uppercase)
 nums=[str(x) for x in range(10)]
