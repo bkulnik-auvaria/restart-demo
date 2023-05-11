@@ -13,3 +13,11 @@ _Hint_:
 x=32-cidr_number (ip4)
 x=128-cidr_number (ip6)
 number_of_ip_adresses 2**x
+_Hint_: 
+
+```
+x = 32 - 16 # <-- use the real cidr here
+x = 128 - 64 # (case for ipv6)
+2 ** x      # <-- this means 2 to the power of x (or 2^x )
+
+```

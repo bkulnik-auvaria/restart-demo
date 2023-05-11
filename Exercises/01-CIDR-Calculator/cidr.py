@@ -1,40 +1,35 @@
-ipVersion=input("Which IP-Family do you want to have? [4/6]")
-print('The IP version was: ', ipVersion)
-
-cidr = input('What is the CIDR?: ') # <--- 10.0.0.0/16
-ip,cidr=cidr.split('/')[0],int(cidr.split('/')[1])
-print('The choosen CIDR was: ', cidr)
-
-ip4_check= lambda ip,cidr: len(ip.split('.'))==4 & cidr<=32
-ip6_check= lambda cidr: cidr<=128
+ipVersion = input("Which IP-Family do you want to have? [4/6]: ")
+print("The IP version was: ", ipVersion)
 
 
-x=32-cidr #<--- IPv6
-number_of_ips = 2**x
-print(number_of_ips)
+cidr = input("What is the CIDR?: ")  # <-- 10.0.0.0/16
+print("The chosen CIDR was: ", cidr)
 
-def ipdestruct(ip):
-    n=ip.split('.')
-    m=0
-    for x in n:
-        m*=256
-        m+=int(x)
-    return m
+# cidr[-2:] # Option 1: Select the last two digits -> Problem: there might be only 1 digit
+splittedCidr = cidr.split("/")
+firstIp = splittedCidr[0]           # 10.0.0.0
+cidrRange = int(splittedCidr[1])
+# firstIp, cidrRange = cidr.split("/")
 
-def ipconstruct(num):
-    ip=''
-    ipl=[]
-    for x in range(4):
-        m=num%256
-        ipl.append(m)
-        num=num//256
-    for x in range(4):
-        if x!=0:
-            ip=ip+'.'
-        ip=ip+str(ipl[-1-x])
-    return ip
+def check_ip4(ip_address, cidr_range):
+    condition1 = len(ip_address.split(".")) == 4
+    condition2 = cidr_range >= 0 and cidr_range <= 32
+    result = (condition1 and condition2)
+    return result # true or false
 
-print('first ip adress: ',ip)
-m=ipdestruct(ip)
-ip2=ipconstruct(m+number_of_ips-1)
-print('last ip adress: ',ip2)
+
+def calculate_number_of_ips(cidr_range, ip_version):
+    if ip_version == "4":
+        x = 32 - cidrRange  
+    else:
+        x = 128 - cidrRange # <-- IPv6
+
+    number_of_ips = 2 ** x
+    return number_of_ips
+
+
+validIpv4 = check_ip4(firstIp, cidrRange)
+# validIpv4 = true/false
+number_of_ips = calculate_number_of_ips(firstIp, cidrRange)
+
+print("The answer is: ", number_of_ips)

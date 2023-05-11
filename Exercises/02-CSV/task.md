@@ -1,7 +1,7 @@
 # Analyze Housing Data
 
 
-Analyze the housing data that you can find "HPI.csv" file.
+Analyze the housing data that you can find "data.csv" file.
 Write a python script to read the data in the provided file and calculate the mean of the _second_ column.
 
 
