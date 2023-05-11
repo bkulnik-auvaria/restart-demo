@@ -47,8 +47,12 @@ print("What do these '\\n' mean? \n\n Can you find out?")
 ---
 
 ```python
-with open("prices.csv") do f:
+with open("prices.csv") as f:
     content = f.read()
+
+f = open("prices.csv")
+f.read()
+f.close()
 
 lines = content.splitlines()
 for line in lines:
