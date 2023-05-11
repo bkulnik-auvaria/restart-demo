@@ -1,3 +1,5 @@
+name=list(input('Input a text: '))
+print(''.join(name[::-1]))
 
 
 word = input("Please enter a word: ")

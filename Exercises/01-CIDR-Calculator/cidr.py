@@ -1,5 +1,3 @@
-
-
 ipVersion = input("Which IP-Family do you want to have? [4/6]: ")
 print("The IP version was: ", ipVersion)
 
