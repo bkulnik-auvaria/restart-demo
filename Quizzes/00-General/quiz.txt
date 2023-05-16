@@ -1,0 +1,150 @@
+# ---- Python Quiz -----
+
+
+
+
+
+
+# Whats the default naming convention in python for variables?
+
+- snake_case         <--- variables
+- CamelCase          <--- types
+- ALL_CAPS           <--- constants
+
+
+
+
+
+
+a, b = 1, 2
+b, a = a, b
+print(a)  # 2
+print(b)  # 1
+
+
+
+
+
+
+i = 0
+while True: # infinite loop
+    i += 1 
+    if i > 5: # i = 6
+        break   # inverse of break => continue
+print(i)  # what is the value of i? -> 6
+
+
+lines = ... # read from text file
+for line in lines:
+    if line == "":
+        print("If start here")
+        continue
+        print("If ends here")  # <-- fading away
+    
+    line.split(",")
+    # process_line(line)
+    ...
+
+
+
+
+
+# how to write this more concise? -> list comprehension
+user_full_names = []
+for user in list_of_users:
+    name = get_full_name(user)
+    user_full_names.append(name)
+
+# list comprehension
+user_full_names = [get_full_name(user) for user in list_of_users]
+
+
+user_full_names.append() # <--- adds a single item to the list
+user_full_names.extend() # <--- adds multiple items to the list
+user_full_names.extend([get_full_name(user) for user in list_of_users])
+
+
+list_of_users = ["a","b","c"]
+def get_full_name(user):
+    D = {"a": 1, "b": 2, "c": 3}
+    return D[user]
+    if user == "a":
+        return 1
+    elif user == "b":
+        return 2
+    else:
+        return 3
+
+user_full_names = [get_full_name(user) for user in list_of_users]
+
+
+L = ["a","b","c"]
+L.append(["d", "e"])
+# L = ["a","b","c", ["d", "e"]]
+
+L = ["a","b","c"]
+L.extend(["d", "e"])
+# L = ["a","b","c", "d", "e"]
+
+
+
+
+# Modules
+
+# Correct or not?
+# Assume all modules exist
+
+import boto3                        # correct :) 
+include boto3                       # not correct - does not exist in python
+from boto3 import Session, Client   # correct :) 
+from boto3 import *                 # correct :) - bad practice
+import matplotlib.pyplot as plt     # correct :)
+from matplotlib import pyplot as plt
+
+
+
+
+# Assume first case:
+import boto3
+# How can we use the Session object
+session = boto3.Session()
+
+
+# Assume second case:
+from http import *  # <--- inside here is also something named "Session"
+from boto3 import *
+session = Session() # <-- it will give an error: specify either http or boto3 - namespace
+
+
+class Session:
+
+    def __init__(self):
+        ...
+    
+    def connect(self):
+        ...
+
+session = Session()
+session.connect()
+
+
+
+
+
+
+
+
+import boto3
+
+# throws "ModuleNotFoundError" -> what could be the reason? -> probably not installed
+
+# pip install boto3 / conda install boto3 (conda case could be different)
+
+
+
+
+output = "sudo users docker office"  # all groups on the system
+output.split(" ") # ["sudo", "users", "docker", "office"]
+
+
+if x in ["sudo", "users", "docker", "office"]

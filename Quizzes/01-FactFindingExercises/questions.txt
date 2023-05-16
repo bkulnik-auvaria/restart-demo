@@ -1,0 +1,123 @@
+# Questions
+
+
+# 1) Define a list and tuple in Python. Provide some examples:
+
+# - mixed types, 
+# - ordered, but can change order of elements, 
+# - can add and remove elements
+# - can have duplicates
+# - its mutable -> overwrite elements
+x = [] # empty list
+y = [1,2,3,"hello"] 
+z = list()
+
+
+# - not mutable
+# - ordered
+# - mixed types are possible
+() # <-- this is not a tuple
+(,) # <-- we always need a comma
+(1, ) # <-- commas can be optional (depends on context) 
+tuple()
+
+
+# 2) What is a namespace in Python?
+
+import random
+random.randint() # symbol/function belongs to namespace of module
+
+text.print() # output
+sudoku.print() # output to the console
+hp_wireless_printer.print() # literally print like a printer 
+
+# unique mapping of names -> names can be reused in different namespaces
+# structuring and organization of code
+
+
+# 3) What is the difference between a local variable and a global variable?
+
+Global variable -> defined outside of functions
+local variable -> defined within some function (or other construct)
+
+Often named "Scope"
+
+app.py
+```
+
+x = 1    # global variable
+
+
+def some_function():
+    y = 2  # local variable
+    y = x + y  # we can access the global variable
+
+
+print(y)  # we cannot access y here
+
+```
+
+Rule of thumb: Limit scope of variables (avoid global variables)
+Why:
+- Readability
+- Avoid confusion / errors / other nasty things
+- Performance
+- Pylint will warn you
+
+
+# 4) What is an IDE? Examples?
+
+IDE = Integrated Development Environment
+- can help you with important tasks
+- highlights errors
+- debugger, compiling
+
+Examples: Visual Studio Code, Cloud9, PyCharm, Spyder, ...
+
+# 5) What are modules in Python?
+
+Module = File with ".py" extension
+Can contain functions, classes, constants, global variables, ...
+
+import NAME_OF_MODULE # <- no ".py" extension
+
+pip install .... 
+
+boto3 # AWS 
+prettymaps # generate maps
+flask, django # web apps
+requests # HTTP requests 
+pytorch # machine learning
+numpy, pandas, scikit-learn, scipy, matplotlib ... # scientific
+
+
+
+# 6) Difference between arrays and lists?
+
+Array = collection of elements with the same data types
+List = collection of different data types
+
+Arrays are for speed
+Arrays are more dense, less memory
+Sometimes to interact with the "system" (C Libraries)
+
+Class about Algorithms & Data-Structures
+
+Lists,
+Hashes, 
+Trees, # very fast search
+Arrays,
+Heaps, # priority queue 
+
+
+# 7) What are operators? Examples?
+
+Operators: 
++, -, *, /, // (integer division) ,% (modulo, rest of a division)
+==, <=, >=, >, <, !=,
++=, -=, *=, /=
+
+x = x + 1  ----> x += 1
+
+10 / 3 = 3.333333 # float
+10 // 3 = 3 # integer 
