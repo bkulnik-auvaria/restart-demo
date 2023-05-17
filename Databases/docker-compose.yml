@@ -1,0 +1,55 @@
+version: '3.0'
+
+
+services:
+
+  mysql:
+    container_name: mysql
+    image: mysql:8
+    ports:
+      - "3306:3306"  # map port 3306 from my computer to port 3306 in the container
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=demo
+      - MYSQL_USER=dbadmin
+      - MYSQL_PASSWORD=1234
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    restart: always
+    environment:
+      PMA_HOST: mysql
+    ports:
+      - "8080:80"
+
+
+##### You can also try out desktop
+#   postgres:
+#     container_name: postgres
+#     image: postgres:15
+#     ports:
+#       - 5432:5432
+#     environment:
+#       - POSTGRES_USER=dbadmin
+#       - POSTGRES_PASSWORD=1234
+#     volumes:
+#       - pgdata:/var/lib/postgresql/data:rw
+  
+#   pgadmin: 
+#     container_name: pgadmin
+#     image: dpage/pgadmin4
+#     ports:
+#       - 8081:80
+#     environment:
+#       - PGADMIN_DEFAULT_EMAIL=dbadmin@example.org
+#       - PGADMIN_DEFAULT_PASSWORD=1234
+
+
+# volumes:
+#   pgdata:
+
+
+
+
+
+
