@@ -10,7 +10,7 @@ docker compose up
 
 If you want to exit `CTRL+C`.
 
-To remove the containers completly run
+To remove the containers completely run
 
 ```
 docker compose down
