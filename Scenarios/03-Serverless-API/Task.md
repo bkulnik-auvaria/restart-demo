@@ -18,11 +18,11 @@ Principle
 ```
 
 
-They are interested.
-- Whats a reasonable choice for the short url length `n`?
-- Serverless Architecture, that can scale up & down to demand.
-- The chosen database and how the tables should look like
-- An low-maintenance, fast and cheap option to host the web application.
+## Tasks
+1. Whats a reasonable choice for the short url length `n`?
+2. Serverless Architecture, that can scale up & down to demand.
+3. Pick a database and outline how the tables should/could look like
+4. Describe how the web application can be hosted effectively.
 
 
 ## Part 2:
