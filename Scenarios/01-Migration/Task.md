@@ -4,13 +4,13 @@ The company ABC Inc has reached out to you because they are unsatisfied with the
 
 There physical host has the following specifications:
 
-| VM   | Server Role                       | vCPUs | Memory | Storage | OS      |
-| ---- | --------------------------------- | ----- | ------ | ------- | ------- |
-| VM1: | App Server 1:                     | 8     | 16 GB  | 500 GB  | Windows |
-| VM2: | Database Server                   | 2     | 16 GB  | 200 GB  | Windows |
-| VM3: | App Server 2 + Database           | 2     | 8 GB   | 300 GB  | Windows |
-| VM4: | Fileserver                        | 8 GB  | 300 GB | Windows | Windows |
-| VM5: | Active Director Domain Controller | 2     | 4 GB   | 60 GB   | Windows |
+| VM  | Server Role                       | vCPUs | Memory | Storage | OS      |
+| --- | --------------------------------- | ----- | ------ | ------- | ------- |
+| VM1 | App Server 1                      | 8     | 16 GB  | 500 GB  | Windows |
+| VM2 | Database Server                   | 2     | 16 GB  | 200 GB  | Windows |
+| VM3 | App Server 2 + Database           | 2     | 8 GB   | 300 GB  | Windows |
+| VM4 | Fileserver                        | 8 GB  | 300 GB | Windows | Windows |
+| VM5 | Active Director Domain Controller | 2     | 4 GB   | 60 GB   | Windows |
 
 
 They want to move their Infrastructure to AWS and their main interests are:
